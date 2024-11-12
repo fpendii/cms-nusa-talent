@@ -1,14 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\BerandaController;
+use App\Http\Controllers\admin\BerandaAdminController;
+use App\Http\Controllers\admin\PenggunaAdminController;
 
 
 
-Route::get('/', [BerandaController::class, 'index']);
+Route::get('/', [BerandaAdminController::class, 'index']);
 
 Route::prefix('admin')->group(function () {
-    Route::get('/beranda', [BerandaController::class, 'index']);
+    Route::get('/beranda', [BerandaAdminController::class, 'index']);
+    Route::get('/pengguna', [PenggunaAdminController::class, 'index']);
 });
 
 

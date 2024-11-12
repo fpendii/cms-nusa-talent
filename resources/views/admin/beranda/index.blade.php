@@ -1,7 +1,5 @@
 @extends('layouts.layout-admin')
 
-@section('title', 'Home Page')
-
 @section('content')
 <div class="pagetitle">
     <h1>Beranda</h1>

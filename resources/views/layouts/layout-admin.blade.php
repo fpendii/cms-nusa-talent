@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>@yield('title', 'My Laravel App')</title>
+  <title>{{$title}}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -29,13 +29,6 @@
   <!-- Template Main CSS File -->
   <link href="/template/assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Updated: Apr 20 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -125,27 +118,17 @@
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
-
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link {{ Request::is('admin/beranda*') ? '' : 'collapsed' }}" href="{{url('admin/beranda')}}">
           <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
+          <span>Beranda</span>
         </a>
       </li><!-- End Dashboard Nav -->
-
-
-
-
-
-
-
-
-
 
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
+        <a class="nav-link {{Request::is('admin/pengguna*') ? '' : 'collapsed'}}" href="{{url('admin/pengguna')}}">
           <i class="bi bi-person"></i>
           <span>Pengguna</span>
         </a>
