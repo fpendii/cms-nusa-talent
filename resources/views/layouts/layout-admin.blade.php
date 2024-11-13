@@ -118,24 +118,37 @@
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
-      <li class="nav-item">
-        <a class="nav-link {{ Request::is('admin/beranda*') ? '' : 'collapsed' }}" href="{{url('admin/beranda')}}">
-          <i class="bi bi-grid"></i>
-          <span>Beranda</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('admin/beranda*') ? '' : 'collapsed' }}" href="{{url('admin/beranda')}}">
+            <i class="bi bi-house-door"></i> <!-- Ikon untuk beranda -->
+            <span>Beranda</span>
+          </a>
+        </li>
 
-      <li class="nav-heading">Pages</li>
+        <li class="nav-item">
+          <a class="nav-link {{Request::is('admin/paket-hosting*') ? '' : 'collapsed'}}" href="{{url('admin/paket-hosting')}}">
+            <i class="bi bi-box"></i> <!-- Ikon untuk paket hosting -->
+            <span>Paket Hosting</span>
+          </a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link {{Request::is('admin/pengguna*') ? '' : 'collapsed'}}" href="{{url('admin/pengguna')}}">
-          <i class="bi bi-person"></i>
-          <span>Pengguna</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link {{Request::is('admin/costumer*') ? '' : 'collapsed'}}" href="{{url('admin/costumer')}}">
+            <i class="bi bi-person-lines-fill"></i> <!-- Ikon untuk customer -->
+            <span>Costumer</span>
+          </a>
+        </li>
 
+        <li class="nav-heading">Pages</li>
 
-    </ul>
+        <li class="nav-item">
+          <a class="nav-link {{Request::is('admin/pengguna*') ? '' : 'collapsed'}}" href="{{url('admin/pengguna')}}">
+            <i class="bi bi-box-arrow-right"></i> <!-- Ikon untuk logout -->
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+
 
   </aside><!-- End Sidebar-->
 
