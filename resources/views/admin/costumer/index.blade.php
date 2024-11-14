@@ -13,7 +13,7 @@
         <div class="d-flex gap-2 align-items-center mb-4">
             <h2>Paket Hosting Aktif</h2>
             <div class="ms-auto">
-                <a href="{{url('/admin/costumer/tambah')}}" class="btn btn-primary">Tambah Costumer</a>
+                <a href="{{url('/admin/costumer/tambah')}}" class="btn btn-primary">Tambah</a>
             </div>
 
         </div>
